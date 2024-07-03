@@ -1,17 +1,27 @@
 #include <stdio.h>
+#include "header/myheader.h"
 
 int main()
 {
-int var = 20;
-int *ptr;
+    int endKey = 1;
 
-ptr = &var;
+    while (endKey != 0)
+    {
+        greet();
 
-printf("Value of var: %d\n", var);
-printf("Address of var: %p\n", &var);
-printf("POinter ptr address: %p\n", ptr);
-printf("Value at pointer ptr: %d\n", *ptr);
+        int sum = add(3, 4);
 
-return 0;
+        printf("Sum: %d\n", sum);
 
+        printf("\n\nPress 0 key to close...");
+
+        if (scanf_s("%d", &endKey) != 1) // 1 being a success return value.
+        {
+
+            while (getchar() != '\n'); // Clear input buffer
+
+            endKey = 1;
+        }
+    }
+    return 0;
 }
