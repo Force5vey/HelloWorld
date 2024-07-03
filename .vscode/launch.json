@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "miDebuggerPath": "C:/Program Files/LLVM/bin/lldb.exe",  // Update this path to where lldb.exe is installed
+            "setupCommands": [
+              {
+                "description": "Enable pretty-printing for lldb",
+                "text": "settings set target.prefer-dynamic-value run-target",
+                "ignoreFailures": true
+              }
+            ],
+            "preLaunchTask": "Build with Clang",
+            "internalConsoleOptions": "openOnSessionStart"
+
+        }
+    ]
+}

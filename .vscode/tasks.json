@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build with Clang",
+        "type": "shell",
+        "command": "clang",
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${workspaceFolder}/a.exe"  // Adjust the output path as needed
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Generated task for Clang"
+      }
+    ]
+  }
