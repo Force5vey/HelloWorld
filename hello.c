@@ -2,10 +2,16 @@
 
 int main()
 {
-    printf("Hello, World!\n");
-    
+int var = 20;
+int *ptr;
 
-    printf("\nPress any key to close...");
-    getchar();
-    return 0;
+ptr = &var;
+
+printf("Value of var: %d\n", var);
+printf("Address of var: %p\n", &var);
+printf("POinter ptr address: %p\n", ptr);
+printf("Value at pointer ptr: %d\n", *ptr);
+
+return 0;
+
 }
